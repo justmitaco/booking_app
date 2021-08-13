@@ -8,9 +8,18 @@
 
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <!--　アイコン　Font Awesome　-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+    <!-- cssを手伝ってくれるBootstrap -->
+    <%= javascript_pack_tag 'application' %>
+    <%= stylesheet_pack_tag 'application' %>
   </head>
 
   <body>
+    <!-- ナビゲーションバー　-->
+    <%= render "shared/navbar" %>
+    <!-- noty -->
+    <%= render "devise/shared/notification" %>
     <%= yield %>
   </body>
 </html>

@@ -5,3 +5,8 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+Room.create(prefecture: 東京)
+Room.create(prefecture: 大阪)
+Room.create(prefecture: 京都)
+Room.create(prefecture: 北海道) 
