@@ -1,0 +1,42 @@
+<div class="top">
+  <div class="container">
+    <div class="area">
+      <div class="form-area" style="margin-left: 60px;">
+        <h3 class="form-title"> 次はどこに行きましょう</h3>
+        </br>
+        <%= form_tag rooms_path, :method => 'get' do %>
+          <div class="form-title">
+            <%= text_field_tag :search, params[:address], placeholder: "エリア", class: "form-control" %>
+            <%= submit_tag "Search", :name => nil, class:"form-control btn btn-normal" %>
+          </div>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="field" style="background-color: #fff;">
+  <div class="container">
+    <div class="city d-flex">
+      <div class="card-area m-5">
+        <h3 class="form-title" style="margin-top: 30px; font-weight: bold;">
+          おすすめのエリア
+        </h3>
+        <div class="row">
+          <div class="panel-item col-lg-3 col-6">
+            <%= link_to image_tag("img_tokyo.jpg", class:"card-image"), rooms_path(search:'東京') %>
+          </div>
+          <div class="panel-item col-lg-3 col-6">
+            <%= link_to image_tag("img_osaka.jpg", class:"card-image"), rooms_path(search:'大阪') %>
+          </div>
+          <div class="panel-item col-lg-3 col-6">
+            <%= link_to image_tag("img_kyoto.jpg", class:"card-image"), rooms_path(search:'京都') %>
+          </div>
+          <div class="panel-item col-lg-3 col-6">
+            <%= link_to image_tag("img_hokkaido.jpeg", class:"card-image"), rooms_path(search:'北海道') %>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div

@@ -1,0 +1,122 @@
+$spaceamounts: (0, 5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 60, 70, 80, 90, 100);
+$sides: (top, bottom, left, right);
+@each $space in $spaceamounts {
+    @each $side in $sides {
+        .m-#{str-slice($side, 0, 1)}-#{$space} {
+            margin-#{$side}: #{$space}px !important;
+        }
+        .p-#{str-slice($side, 0, 1)}-#{$space} {
+            padding-#{$side}: #{$space}px !important;
+        }
+    }
+    .m-#{$space} {
+        margin: #{$space}px !important;
+    }
+    .p-#{$space} {
+        padding: #{$space}px !important;
+    }
+    .h-#{$space} {
+        margin-top: #{$space}px !important;
+        margin-bottom: #{$space}px !important;
+    }
+    .f-#{$space} {
+        font-size: #{$space}px !important;
+    }
+}
+.is-horizontal-center {
+  justify-content: center;
+}
+.small-title {
+  font-size: 10px;
+}
+.star-review {
+  color: #ffbf00;
+  font-size: 13px;
+  font-weight: 600;
+}
+//ナビバーのアバター画像位置
+.image {
+  //margin-top: 0.6rem;
+  display: flex; /* flexに */
+  align-items: center;
+}
+
+.badge {
+    background-color: #FF5A5F;
+    position: relative;
+    top: -15px;
+    left: -5px;
+}
+#add-card form {
+    width: 480px;
+    margin: 20px auto;
+}
+#add-card label {
+    position: relative;
+    color: #6A7C94;
+    font-weight: 400;
+    height: 48px;
+    line-height: 48px;
+    margin-bottom: 10px;
+    display: block;
+}
+#add-card label > span {
+    float: left;
+}
+#add-card button {
+    float: left;
+    display: block;
+    background-image: linear-gradient(-180deg, #F8B563 0%, #F99A52 100%);
+    box-shadow: 0 1px 2px 0 rgba(0,0,0,0.10), inset 0 -1px 0 0 #E57C45;
+    color: white;
+    border-radius: 24px;
+    border: 0;
+    margin-top: 20px;
+    font-size: 17px;
+    font-weight: 500;
+    width: 100%;
+    height: 48px;
+    line-height: 48px;
+    outline: none;
+}
+#add-card button:focus {
+    background: #EF8C41;
+}
+#add-card button:active {
+    background: #E17422;
+}
+.outcome {
+    float: left;
+    width: 100%;
+    padding-top: 8px;
+    min-height: 20px;
+    text-align: center;
+}
+.error {
+    display: none;
+    font-size: 13px;
+}
+.error.visible {
+    display: inline;
+}
+.error {
+    color: #E4584C;
+}
+
+.message-alert {
+    color: #d43242;
+    font-size: 14px;
+    padding-top: 10px;
+}
+#left {
+    padding: 10px 400px 10px 20px;
+    overflow: scroll;
+    height: 100%;
+}
+#right {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 450px;
+    height: 100%;
+}
